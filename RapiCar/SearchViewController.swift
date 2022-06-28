@@ -31,6 +31,27 @@ class SearchViewController: UIViewController{
     
     
         backupCarArray = carArray
+     
+     ####################################################
+     extension ViewController:UITableViewDataSource{
+         
+         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+             guard let backupCarArray = beerList else { return 0 }
+             
+             return beers.count
+         }
+         
+         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+             
+             let  cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+             
+             let beer = beerList![indexPath.row]
+             cell.textLabel?.text = beer.name
+             
+             return cell
+             
+         }
+     #############################################
         
         carTableView.dataSource = self
         carTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

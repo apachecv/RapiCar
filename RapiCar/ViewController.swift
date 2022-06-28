@@ -10,7 +10,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBAction func login(_ sender: UIButton) {
-        print("Acces Login")
+        
+        //let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        //self.navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
     @IBAction func sigin(_ sender: UIButton) {
         print("Acces Register")
@@ -21,6 +25,11 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Rapicar"
+        
+        
+        
         // Do any additional setup after loading the view.
     }
 
