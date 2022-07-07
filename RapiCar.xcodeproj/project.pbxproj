@@ -10,8 +10,6 @@
 		849C64262873428D00D1B2C8 /* Pods_RapiCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512A8120063E602D567C5E9F /* Pods_RapiCar.framework */; };
 		849C642F2874AF0500D1B2C8 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */; };
 		849C64302874AF0500D1B2C8 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */; };
-		849C64352876064600D1B2C8 /* Car2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C64332876064600D1B2C8 /* Car2TableViewCell.swift */; };
-		849C64362876064600D1B2C8 /* Car2TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C64342876064600D1B2C8 /* Car2TableViewCell.xib */; };
 		84A91161286927B50095749C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91160286927B50095749C /* AppDelegate.swift */; };
 		84A91163286927B50095749C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91162286927B50095749C /* SceneDelegate.swift */; };
 		84A91165286927B50095749C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91164286927B50095749C /* ViewController.swift */; };
@@ -29,8 +27,6 @@
 		849C64222873427A00D1B2C8 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
 		849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
-		849C64332876064600D1B2C8 /* Car2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car2TableViewCell.swift; sourceTree = "<group>"; };
-		849C64342876064600D1B2C8 /* Car2TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Car2TableViewCell.xib; sourceTree = "<group>"; };
 		84A9115D286927B50095749C /* RapiCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapiCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A91160286927B50095749C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A91162286927B50095749C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,8 +68,6 @@
 			isa = PBXGroup;
 			children = (
 				849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */,
-				849C64332876064600D1B2C8 /* Car2TableViewCell.swift */,
-				849C64342876064600D1B2C8 /* Car2TableViewCell.xib */,
 				849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */,
 			);
 			path = CarTableViewCell;
@@ -198,7 +192,6 @@
 				849C64302874AF0500D1B2C8 /* CarTableViewCell.xib in Resources */,
 				84A9116A286927B50095749C /* Assets.xcassets in Resources */,
 				84A91168286927B50095749C /* Main.storyboard in Resources */,
-				849C64362876064600D1B2C8 /* Car2TableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +249,6 @@
 				84A9117D2869FFC70095749C /* LoginViewController.swift in Sources */,
 				84A91165286927B50095749C /* ViewController.swift in Sources */,
 				84A91161286927B50095749C /* AppDelegate.swift in Sources */,
-				849C64352876064600D1B2C8 /* Car2TableViewCell.swift in Sources */,
 				84A91163286927B50095749C /* SceneDelegate.swift in Sources */,
 				84A9117F2869FFD60095749C /* SiginViewController.swift in Sources */,
 			);

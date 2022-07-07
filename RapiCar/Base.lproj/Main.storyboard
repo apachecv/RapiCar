@@ -314,7 +314,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca tu auto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4S-dk-AHj">
-                                <rect key="frame" x="150" y="40" width="132" height="40"/>
+                                <rect key="frame" x="150" y="60" width="132" height="40"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -324,7 +324,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OPp-g6-NvW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OPp-g6-NvW">
                                 <rect key="frame" x="20" y="146" width="374" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -334,13 +334,15 @@
                         <constraints>
                             <constraint firstItem="OF2-SL-UX8" firstAttribute="leading" secondItem="OPp-g6-NvW" secondAttribute="leading" id="5tM-X5-Yc9"/>
                             <constraint firstItem="OF2-SL-UX8" firstAttribute="trailing" secondItem="OPp-g6-NvW" secondAttribute="trailing" id="7BH-er-YJm"/>
+                            <constraint firstItem="X31-nP-Zix" firstAttribute="trailing" secondItem="d4S-dk-AHj" secondAttribute="trailing" constant="132" id="CSA-fz-WIZ"/>
+                            <constraint firstItem="d4S-dk-AHj" firstAttribute="top" secondItem="JLf-d0-w7F" secondAttribute="top" constant="60" id="Cdp-t6-eKY"/>
                             <constraint firstItem="OPp-g6-NvW" firstAttribute="leading" secondItem="X31-nP-Zix" secondAttribute="leading" constant="20" id="QIY-w4-tq8"/>
                             <constraint firstItem="X31-nP-Zix" firstAttribute="trailing" secondItem="OPp-g6-NvW" secondAttribute="trailing" constant="20" id="auT-PP-4oK"/>
-                            <constraint firstItem="d4S-dk-AHj" firstAttribute="leading" secondItem="JLf-d0-w7F" secondAttribute="leading" constant="150" id="cOp-bX-YKg"/>
+                            <constraint firstItem="OF2-SL-UX8" firstAttribute="top" secondItem="d4S-dk-AHj" secondAttribute="bottom" constant="4" id="eHD-2C-xZ2"/>
                             <constraint firstItem="OPp-g6-NvW" firstAttribute="bottom" secondItem="X31-nP-Zix" secondAttribute="bottom" id="iu7-3Z-mGT"/>
                             <constraint firstItem="OPp-g6-NvW" firstAttribute="top" secondItem="OF2-SL-UX8" secondAttribute="bottom" constant="8" symbolic="YES" id="qsj-Ra-Eii"/>
                             <constraint firstItem="OF2-SL-UX8" firstAttribute="top" secondItem="X31-nP-Zix" secondAttribute="top" constant="16" id="rq7-uB-aFV"/>
-                            <constraint firstItem="X31-nP-Zix" firstAttribute="top" secondItem="d4S-dk-AHj" secondAttribute="bottom" constant="8" symbolic="YES" id="uBX-qS-kAv"/>
+                            <constraint firstItem="d4S-dk-AHj" firstAttribute="leading" secondItem="X31-nP-Zix" secondAttribute="leading" constant="150" id="zWg-km-9MB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Wjn-C8-cKa"/>
