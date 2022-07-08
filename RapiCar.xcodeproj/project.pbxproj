@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		849C64262873428D00D1B2C8 /* Pods_RapiCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512A8120063E602D567C5E9F /* Pods_RapiCar.framework */; };
-		849C642F2874AF0500D1B2C8 /* CarTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */; };
-		849C64302874AF0500D1B2C8 /* CarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */; };
-		849C64382877917600D1B2C8 /* DataCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C64372877917600D1B2C8 /* DataCar.swift */; };
-		849C643A2877AAAF00D1B2C8 /* PhotosCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C64392877AAAF00D1B2C8 /* PhotosCar.swift */; };
 		84A91161286927B50095749C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91160286927B50095749C /* AppDelegate.swift */; };
 		84A91163286927B50095749C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91162286927B50095749C /* SceneDelegate.swift */; };
 		84A91165286927B50095749C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A91164286927B50095749C /* ViewController.swift */; };
@@ -27,10 +23,6 @@
 /* Begin PBXFileReference section */
 		512A8120063E602D567C5E9F /* Pods_RapiCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapiCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C64222873427A00D1B2C8 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarTableViewCell.swift; sourceTree = "<group>"; };
-		849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarTableViewCell.xib; sourceTree = "<group>"; };
-		849C64372877917600D1B2C8 /* DataCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCar.swift; sourceTree = "<group>"; };
-		849C64392877AAAF00D1B2C8 /* PhotosCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCar.swift; sourceTree = "<group>"; };
 		84A9115D286927B50095749C /* RapiCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RapiCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84A91160286927B50095749C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84A91162286927B50095749C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,17 +58,6 @@
 				512A8120063E602D567C5E9F /* Pods_RapiCar.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		849C64312874AF2700D1B2C8 /* CarTableViewCell */ = {
-			isa = PBXGroup;
-			children = (
-				849C642D2874AF0500D1B2C8 /* CarTableViewCell.swift */,
-				849C64372877917600D1B2C8 /* DataCar.swift */,
-				849C64392877AAAF00D1B2C8 /* PhotosCar.swift */,
-				849C642E2874AF0500D1B2C8 /* CarTableViewCell.xib */,
-			);
-			path = CarTableViewCell;
 			sourceTree = "<group>";
 		};
 		849C64322874AF5C00D1B2C8 /* AutenticationUser */ = {
@@ -115,7 +96,6 @@
 				84A91164286927B50095749C /* ViewController.swift */,
 				84A911802869FFE00095749C /* SearchViewController.swift */,
 				849C64322874AF5C00D1B2C8 /* AutenticationUser */,
-				849C64312874AF2700D1B2C8 /* CarTableViewCell */,
 				84A91169286927B50095749C /* Assets.xcassets */,
 				84A9116B286927B50095749C /* LaunchScreen.storyboard */,
 				84A9116E286927B50095749C /* Info.plist */,
@@ -144,7 +124,7 @@
 				84A91159286927B50095749C /* Sources */,
 				84A9115A286927B50095749C /* Frameworks */,
 				84A9115B286927B50095749C /* Resources */,
-				20B476E3A58C8367E47A3042 /* [CP] Embed Pods Frameworks */,
+				227BD9A5DB73C1CDCD69C4BE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -195,7 +175,6 @@
 			files = (
 				84A9116D286927B50095749C /* LaunchScreen.storyboard in Resources */,
 				84A91183286AA3860095749C /* GoogleService-Info.plist in Resources */,
-				849C64302874AF0500D1B2C8 /* CarTableViewCell.xib in Resources */,
 				84A9116A286927B50095749C /* Assets.xcassets in Resources */,
 				84A91168286927B50095749C /* Main.storyboard in Resources */,
 			);
@@ -204,7 +183,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		20B476E3A58C8367E47A3042 /* [CP] Embed Pods Frameworks */ = {
+		227BD9A5DB73C1CDCD69C4BE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -251,9 +230,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A911812869FFE00095749C /* SearchViewController.swift in Sources */,
-				849C642F2874AF0500D1B2C8 /* CarTableViewCell.swift in Sources */,
-				849C64382877917600D1B2C8 /* DataCar.swift in Sources */,
-				849C643A2877AAAF00D1B2C8 /* PhotosCar.swift in Sources */,
 				84A9117D2869FFC70095749C /* LoginViewController.swift in Sources */,
 				84A91165286927B50095749C /* ViewController.swift in Sources */,
 				84A91161286927B50095749C /* AppDelegate.swift in Sources */,

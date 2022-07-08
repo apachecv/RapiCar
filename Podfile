@@ -6,17 +6,15 @@ target 'RapiCar' do
   use_frameworks!
 
   # Pods for RapiCar
-  
-pod 'Alamofire'
-pod 'FirebaseAnalytics'
-pod 'FirebaseAuth'
-pod 'FirebaseMessaging'
-pod 'FirebaseCrashlytics'
-pod 'FirebaseRemoteConfig'
-pod 'FirebaseFirestore'
-pod 'FirebaseFirestoreSwift'
-pod 'FirebaseCore'
-pod 'FirebaseDatabase'
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
+  pod 'FirebaseMessaging'
+  pod 'FirebaseCrashlytics'
+  pod 'FirebaseRemoteConfig'
+  pod 'FirebaseFirestore'
+  pod 'FirebaseFirestoreSwift'
+  pod 'FirebaseCore'
+  pod 'FirebaseDatabase'
 
 
 end
