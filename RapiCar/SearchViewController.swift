@@ -8,19 +8,14 @@
 import UIKit
 import CoreLocation
 
-struct Car: Codable {
-    
-    var car : [ModelCar]
-}
-
 struct ModelCar : Codable{
-      let year : String
-      let id : Int
-      let horsepower : Int
-      let make : String
-      let model : String
-      let price : Int
-      let img_url : String
+      let year         : Int?
+      let id           : Int?
+      let horsepower   : Int?
+      let make         : String?
+      let model        : String?
+      let price        : Double?
+      let img_url      : String?
     
     
 }
@@ -29,8 +24,8 @@ class SearchViewController: UIViewController{
     var auto : [ModelCar] = []
     
     @IBOutlet weak var titleSearchCar: UILabel!
-    @IBOutlet weak var textSearchCar: UITextField!
-    @IBOutlet weak var carTableView: UITableView!
+    @IBOutlet weak var textSearchCar : UITextField!
+    @IBOutlet weak var carTableView  : UITableView!
     
     override func viewDidLoad() {
         
@@ -38,29 +33,36 @@ class SearchViewController: UIViewController{
         super.viewDidLoad()
         carTableView.delegate = self
         carTableView.dataSource = self
-        carTableView.rowHeight = 220
-        buscarAuto()
+        //carTableView.rowHeight = 220
+        getCarData()
+
         
     }
 
-
-func buscarAuto(){
-    print("LLamando")
-    let urlString = "https://private-anon-1fc702871f-carsapi1.apiary-mock.com/cars"
-    if let url = URL(string: urlString){
-        if let data = try?Data( contentsOf: url){
-            print("LLamando data \(data)")
-            let decodificador = JSONDecoder()
+    func getCarData(){
+        let url = URL(string: "https://private-anon-1fc702871f-carsapi1.apiary-mock.com/cars")!
+        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            if let datosDecodificados = try?
-                decodificador.decode([ModelCar].self, from: data){
-                print("datosDecodificados : \(datosDecodificados.count)")
-                auto = datosDecodificados
-                carTableView.reloadData()
+            guard let data = data else {
+                print("---->> sin data")
+                return
             }
-        }
+            do{
+                
+                let carData = try JSONDecoder().decode([ModelCar].self, from: data)
+                
+                DispatchQueue.main.async {
+                    self.auto = carData
+                    self.carTableView.reloadData()
+                }
+
+                print("---->> hola data:: \(carData)")
+                
+            }catch{
+                print("---->> ha ocurrido un error:: \(error.localizedDescription)")
+            }
+        }.resume()
     }
-}
 }
 
 extension SearchViewController: UITableViewDataSource , UITableViewDelegate {
@@ -73,7 +75,6 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = carTableView.dequeueReusableCell(withIdentifier:"celda" , for: indexPath)
         celda.textLabel?.text = auto[indexPath.row].model
-            printContent("")
         return celda
             }
 }
