@@ -41,6 +41,7 @@ class LoginViewController: UIViewController {
                         alerta.addAction(btnCancelar)
                         alerta.addAction(btnCrear)
                         self.present(alerta,animated: true,completion: nil)
+                        self.modalPresentationStyle = .fullScreen
                     
                   
                 }else{
@@ -58,6 +59,8 @@ class LoginViewController: UIViewController {
        
 }
 }
+
+
 /*func validarContraseña(){
     if password != self.passwordText.text! {
         let alerta = UIAlertController(title: "Error al iniciar Sesion", message: "Contraseña Incorrecta", preferredStyle: .alert)

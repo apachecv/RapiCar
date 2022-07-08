@@ -13,7 +13,7 @@ import FirebaseFirestore
 
 class SiginViewController: UIViewController {
     
-
+    
     
     @IBOutlet weak var textName: UITextField!
     @IBOutlet weak var textLastName: UITextField!
@@ -28,10 +28,10 @@ class SiginViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        
-        
     }
+    
    
     private let database = Firestore.firestore()
     @IBAction func register(_ sender: Any) {
@@ -43,7 +43,9 @@ class SiginViewController: UIViewController {
                 let btnOK = UIAlertAction(title: "Aceptar", style: .default)
                 alerta.addAction(btnOK)
                 self.present(alerta,animated: true,completion: nil)
-                }   else {
+                }
+                
+                else {
                     
                     self.database.collection("Usuarios").document(self.textUserEmail.text ?? "").setData([
                         "Nombre":textName.text ?? "",
@@ -64,9 +66,11 @@ class SiginViewController: UIViewController {
                     )
                     alerta.addAction(btnAceptar)
                     self.present(alerta, animated: true,completion: nil)
+                    
                     }
         }
 )
             }
         }
+    
 }

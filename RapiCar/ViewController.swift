@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBAction func login(_ sender: UIButton) {
     }
     @IBAction func sigin(_ sender: UIButton) {
+       
         print("Acces Register")
     }
     
