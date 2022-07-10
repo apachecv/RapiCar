@@ -14,6 +14,7 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var modeloLabel: UILabel!
     @IBOutlet weak var añoLabel: UILabel!
     @IBOutlet weak var precioLabel: UILabel!
+    @IBOutlet weak var puertasLabel: UILabel!
     
     
     
