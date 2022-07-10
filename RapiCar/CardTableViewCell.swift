@@ -9,6 +9,16 @@ import UIKit
 
 class CardTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageCar: UIImageView!
+    @IBOutlet weak var marcaLabel: UILabel!
+    @IBOutlet weak var modeloLabel: UILabel!
+    @IBOutlet weak var añoLabel: UILabel!
+    @IBOutlet weak var precioLabel: UILabel!
+    
+    
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

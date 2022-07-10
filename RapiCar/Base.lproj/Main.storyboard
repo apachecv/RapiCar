@@ -103,7 +103,7 @@
         <scene sceneID="ZnO-e2-Iac">
             <objects>
                 <viewController storyboardIdentifier="SignUpVC" id="89r-JY-ObY" customClass="SiginViewController" customModule="RapiCar" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yR6-ss-2LQ">
+                    <view key="view" contentMode="scaleToFill" id="yR6-ss-2LQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>

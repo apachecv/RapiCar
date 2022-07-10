@@ -24,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		512A8120063E602D567C5E9F /* Pods_RapiCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapiCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84797F062879FF5300FA4503 /* JsonLocal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = JsonLocal.xcconfig; sourceTree = "<group>"; };
 		849C64222873427A00D1B2C8 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C643D28789CE700D1B2C8 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		849C643E28789CE700D1B2C8 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
@@ -99,6 +100,7 @@
 				84A91166286927B50095749C /* Main.storyboard */,
 				84A91164286927B50095749C /* ViewController.swift */,
 				84A911802869FFE00095749C /* SearchViewController.swift */,
+				84797F062879FF5300FA4503 /* JsonLocal.xcconfig */,
 				849C64322874AF5C00D1B2C8 /* AutenticationUser */,
 				84A91169286927B50095749C /* Assets.xcassets */,
 				84A9116B286927B50095749C /* LaunchScreen.storyboard */,
