@@ -6,19 +6,33 @@
 //
 
 import UIKit
+import MapKit
 import CoreLocation
 
 struct ModelCar : Codable{
-      let year         : Int
+      let horsepower   : String
       let id           : Int
-      let horsepower   : Int
+      let img_url      : String
       let make         : String
       let model        : String
-      let price        : Double
-      let img_url      : String
+      let price        : String
+      let year         : String
+      let puertas      : String
+      let pasajeros    : String
+      let latitude     : Double
+      let length       : Double
     
-    
-}
+        var distance : Double {
+            let myLength = LocationManager.shared.location!.longitude
+            let myLatitude =  LocationManager.shared.location!.latitude
+            let selfLocation = CLLocation(latitude: myLatitude, longitude: myLength)
+            let location = CLLocation(latitude: latitude, longitude: length)
+            let distance = selfLocation.distance(from: location)/1000
+            return distance
+        }
+    }
+
+
 
 class SearchViewController: UIViewController{
     var auto : [ModelCar] = []
@@ -42,23 +56,24 @@ class SearchViewController: UIViewController{
     }
 
     func getCarData(){
-       
-       let url = URL(string: "https://private-anon-1fc702871f-carsapi1.apiary-mock.com/cars")!
+        guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            guard let data = data else {
+            guard data != nil else {
                 print("---->> sin data")
                 return
             }
             do{
-                
-                let carData = try JSONDecoder().decode([ModelCar].self, from: data)
+               let jsonData = try Data(contentsOf: url)
+                let carData = try JSONDecoder().decode([ModelCar].self, from: jsonData)
                 
                 DispatchQueue.main.async {
                     self.auto = carData
                     self.carTableView.reloadData()
                 }
-
                 print("---->> hola data:: \(carData)")
                 
             }catch{
@@ -78,10 +93,12 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
         celda.marcaLabel.text = auto[indexPath.row].make
-        celda.modeloLabel.text = "Modelo:   " + auto[indexPath.row].model
-        //celda.añoLabel.text = "Año:         " + auto[indexPath.row].year
+        celda.modeloLabel.text =    "Modelo:    " + auto[indexPath.row].model
+        celda.añoLabel.text =       "Año:       " + auto[indexPath.row].year
+        celda.precioLabel.text =    "Precio:    " + auto[indexPath.row].price
+        celda.puertasLabel.text  =  "N° Puertas:" + auto[indexPath.row].puertas
         
-        if let url = URL(string: "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210124-LOS-10-CARROS-MAS-VENDIDOS-DEL-MUNDO-EN-2020-01.jpg") {
+        if let url = URL(string: auto[indexPath.row].img_url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
                 
                 DispatchQueue.main.async {

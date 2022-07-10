@@ -23,10 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         title = "Rapicar"
-        
-        
-        
-        // Do any additional setup after loading the view.
+
     }
 
 
