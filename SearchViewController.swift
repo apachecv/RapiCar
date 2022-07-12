@@ -10,42 +10,15 @@ import Foundation
 import MapKit
 import CoreLocation
 
-struct Auto : Codable  {
-    let carro : [ModelCar]
-}
-struct ModelCar : Codable , Identifiable {
-      let horsepower   : String
-      let id           : Int
-      let img_url      : String
-      let make         : String
-      let model        : String
-      let price        : String
-      let year         : String
-      let puertas      : String
-      let pasajeros    : String
-      let latitude     : Double
-      let length       : Double
-    
-        var distance : Double {
-            let myLength = LocationManager.shared.location!.longitude
-            let myLatitude =  LocationManager.shared.location!.latitude
-            let selfLocation = CLLocation(latitude: myLatitude, longitude: myLength)
-            let location = CLLocation(latitude: latitude, longitude: length)
-            let distance = selfLocation.distance(from: location)/1000
-            return distance
-        }
-    }
-
 class SearchViewController: UIViewController  {
     
-    
-    
     @IBOutlet weak var titleSearchCar: UILabel!
-    @IBOutlet weak var textSearchCar : UITextField!
     @IBOutlet weak var carTableView  : UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var auto : [ModelCar] = []
     var autoSeleccionado : ModelCar?
+    var autoFiltrado : [ModelCar] = []
     
     override func viewDidLoad() {
         
@@ -55,6 +28,8 @@ class SearchViewController: UIViewController  {
         carTableView.delegate = self
         carTableView.dataSource = self
         getCarData()
+        searchBar.delegate = self
+
     }
     
     func getCarData(){
@@ -71,10 +46,11 @@ class SearchViewController: UIViewController  {
             do{
                let jsonData = try Data(contentsOf: url)
                 let carData = try JSONDecoder().decode([ModelCar].self, from: jsonData)
+                self.auto = carData
+                
                 
                 DispatchQueue.main.async {
-
-                    self.auto = carData
+                    self.autoFiltrado = self.auto
                     self.carTableView.reloadData()
                 }
                 print("---->> hola data:: \(carData)")
@@ -85,7 +61,22 @@ class SearchViewController: UIViewController  {
         }.resume()
     }
 }
- 
+
+extension SearchViewController : UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        autoFiltrado = []
+        if searchText == "" {
+            autoFiltrado = auto
+        } else {
+            for car in auto {
+                if car.make.lowercased().contains(searchText.lowercased()){
+                    autoFiltrado.append(car)
+                }
+            }
+        }
+        self.carTableView.reloadData()
+    }
+}
 
 
 
@@ -94,21 +85,21 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return auto.count
+        return autoFiltrado.count
         
     }
    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
-        celda.marcaLabel.text = auto[indexPath.row].make
-        celda.modeloLabel.text =  auto[indexPath.row].model
-        celda.añoLabel.text =  "Año:" + auto[indexPath.row].year
-        celda.precioLabel.text =  auto[indexPath.row].price
-        celda.puertasLabel.text  =  auto[indexPath.row].puertas
-        celda.pasajerosLabel.text = auto[indexPath.row].pasajeros
+        celda.marcaLabel.text = autoFiltrado[indexPath.row].make
+        celda.modeloLabel.text =  autoFiltrado[indexPath.row].model
+        celda.añoLabel.text =  "Año:" + autoFiltrado[indexPath.row].year
+        celda.precioLabel.text =  autoFiltrado[indexPath.row].price
+        celda.puertasLabel.text  =  autoFiltrado[indexPath.row].puertas
+        celda.pasajerosLabel.text = autoFiltrado[indexPath.row].pasajeros
         
-        if let url = URL(string: auto[indexPath.row].img_url) {
+        if let url = URL(string: autoFiltrado[indexPath.row].img_url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
                 
                 DispatchQueue.main.async {
@@ -122,7 +113,7 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        autoSeleccionado = auto[indexPath.row]
+        autoSeleccionado = autoFiltrado[indexPath.row]
         
         performSegue(withIdentifier: "go", sender: self)
         carTableView.deselectRow(at: indexPath, animated: true)
@@ -141,6 +132,7 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
             LocationManager.shared.getLocation()
             print("GPS Activado")
             
+            
         }else{
 
             print("GPS Desactivado")
@@ -148,10 +140,3 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
     }
 }
 }
-/*extension SearchViewController : PressButtonDelegate {
-    func goBuyView (idCar : Int){
-        performSegue(withIdentifier: "go", sender: idCar)
-        print("")
-    }
-    
-}*/
