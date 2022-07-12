@@ -26,11 +26,10 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
     }
     
     
-    
+
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            location = locations.first?.coordinate
+        location = locations.first?.coordinate
         print("localizacion actual \(String(describing: location))")
 
         }
-    
 }

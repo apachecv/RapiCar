@@ -8,18 +8,13 @@
 import UIKit
 import MapKit
 import CoreLocation
-
+import SwiftUI
 
 class MapViewController: UIViewController , CLLocationManagerDelegate {
-    
-    var locales: ModelCar?
-    
     
     @IBOutlet var mapView: MKMapView!
     
     let manager = CLLocationManager()
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +35,9 @@ class MapViewController: UIViewController , CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         if let location = locations.first {
-       
             manager.stopUpdatingLocation()
-            
             render (location: location)
+            print("Mi locacion : \(location)")
             
         }
     }
@@ -51,21 +45,17 @@ class MapViewController: UIViewController , CLLocationManagerDelegate {
         
         let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
                                                         longitude: location.coordinate.longitude)
-                
-        
-//        let coordinate = CLLocationCoordinate2D(latitude: location.coordinate.latitude,
-//                                                longitude: location.coordinate.longitude)
         
         let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         
         let region = MKCoordinateRegion(center: coordinate,
                                         span: span)
-        mapView.setRegion(region,
+        mapView?.setRegion(region,
                           animated: true)
         
         let pin = MKPointAnnotation()
         pin.coordinate = coordinate
-        mapView.addAnnotation(pin)
+        mapView?.addAnnotation(pin)
         
     }
 }

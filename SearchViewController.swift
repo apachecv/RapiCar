@@ -102,12 +102,11 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
         celda.marcaLabel.text = auto[indexPath.row].make
-        celda.modeloLabel.text =    "Modelo:    " + auto[indexPath.row].model
-        celda.añoLabel.text =       "Año:       " + auto[indexPath.row].year
-        celda.precioLabel.text =    "Precio:    " + auto[indexPath.row].price
-        celda.puertasLabel.text  =  "N° Puertas:" + auto[indexPath.row].puertas
-        celda.obtenerButton.tag = auto[indexPath.row].id
-        //celda.btnDelegate = self
+        celda.modeloLabel.text =  auto[indexPath.row].model
+        celda.añoLabel.text =  "Año:" + auto[indexPath.row].year
+        celda.precioLabel.text =  auto[indexPath.row].price
+        celda.puertasLabel.text  =  auto[indexPath.row].puertas
+        celda.pasajerosLabel.text = auto[indexPath.row].pasajeros
         
         if let url = URL(string: auto[indexPath.row].img_url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }

@@ -21,7 +21,7 @@ class CardTableViewCell: UITableViewCell  {
     @IBOutlet weak var precioLabel: UILabel!
     @IBOutlet weak var puertasLabel: UILabel!
     @IBOutlet weak var distanciaLabel: UILabel!
-    
+    @IBOutlet weak var pasajerosLabel: UILabel!
     @IBOutlet weak var obtenerButton: UIButton!
     
     weak var btnDelegate : PressButtonDelegate?
