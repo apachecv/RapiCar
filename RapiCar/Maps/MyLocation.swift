@@ -29,7 +29,7 @@ class LocationManager: NSObject, CLLocationManagerDelegate{
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
             location = locations.first?.coordinate
-            print("localizacion actual \(location)")
+        print("localizacion actual \(String(describing: location))")
 
         }
     

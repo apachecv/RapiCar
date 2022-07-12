@@ -25,7 +25,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="qps-5l-fpC">
-                        <rect key="frame" x="194" y="24" width="181" height="174"/>
+                        <rect key="frame" x="194" y="24" width="181" height="127"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Modelo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0j-8X-HKZ">
@@ -56,12 +56,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-wg-OFA">
-                                <rect key="frame" x="20" y="145" width="133" height="19"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awR-Dc-2Ur">
+                                <rect key="frame" x="20" y="128" width="153" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="contentLayoutGuide" id="ZNQ-mb-hye"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="AI7-un-XJI"/>
@@ -70,15 +71,27 @@
                         <rect key="frame" x="4" y="55" width="182" height="143"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-wg-OFA">
+                        <rect key="frame" x="218" y="167" width="133" height="19"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.9480948575" green="0.91502575100000005" blue="0.18444040279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        <connections>
+                            <action selector="obtenerButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4IU-eu-6qN"/>
+                        </connections>
+                    </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="tintColor" systemColor="labelColor"/>
             <connections>
                 <outlet property="añoLabel" destination="0Of-Xd-aPi" id="FaQ-Yh-Vlp"/>
+                <outlet property="distanciaLabel" destination="awR-Dc-2Ur" id="Wwt-0q-hZL"/>
                 <outlet property="imageCar" destination="oYy-4e-70l" id="R1E-GS-7wk"/>
                 <outlet property="marcaLabel" destination="5xo-l8-X7J" id="13U-y2-pDc"/>
                 <outlet property="modeloLabel" destination="P0j-8X-HKZ" id="lsN-eo-J6U"/>
+                <outlet property="obtenerButton" destination="2kx-wg-OFA" id="4F8-G3-hxu"/>
                 <outlet property="precioLabel" destination="uRD-yz-I3i" id="qla-Gk-tbj"/>
                 <outlet property="puertasLabel" destination="eXf-zD-R0f" id="BtP-pX-9uW"/>
             </connections>

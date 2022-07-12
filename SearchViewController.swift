@@ -6,10 +6,14 @@
 //
 
 import UIKit
+import Foundation
 import MapKit
 import CoreLocation
 
-struct ModelCar : Codable{
+struct Auto : Codable  {
+    let carro : [ModelCar]
+}
+struct ModelCar : Codable , Identifiable {
       let horsepower   : String
       let id           : Int
       let img_url      : String
@@ -32,35 +36,33 @@ struct ModelCar : Codable{
         }
     }
 
-
-
-class SearchViewController: UIViewController{
-    var auto : [ModelCar] = []
+class SearchViewController: UIViewController  {
+    
+    
     
     @IBOutlet weak var titleSearchCar: UILabel!
     @IBOutlet weak var textSearchCar : UITextField!
     @IBOutlet weak var carTableView  : UITableView!
     
+    var auto : [ModelCar] = []
+    var autoSeleccionado : ModelCar?
+    
     override func viewDidLoad() {
         
-
         super.viewDidLoad()
-        
         carTableView.rowHeight = 220
         carTableView.register(UINib(nibName: "CardTableViewCell", bundle: nil),    forCellReuseIdentifier: "cellcar")
-        
         carTableView.delegate = self
         carTableView.dataSource = self
         getCarData()
-                              
     }
-
+    
     func getCarData(){
         guard let path = Bundle.main.path(forResource: "data", ofType: "json") else {
             return
         }
         let url = URL(fileURLWithPath: path)
-        let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             guard data != nil else {
                 print("---->> sin data")
@@ -71,6 +73,7 @@ class SearchViewController: UIViewController{
                 let carData = try JSONDecoder().decode([ModelCar].self, from: jsonData)
                 
                 DispatchQueue.main.async {
+
                     self.auto = carData
                     self.carTableView.reloadData()
                 }
@@ -82,14 +85,20 @@ class SearchViewController: UIViewController{
         }.resume()
     }
 }
+ 
 
-extension SearchViewController: UITableViewDataSource , UITableViewDelegate {
+
+
+extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
+   
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return auto.count
         
     }
-        
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
         celda.marcaLabel.text = auto[indexPath.row].make
@@ -97,57 +106,53 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate {
         celda.añoLabel.text =       "Año:       " + auto[indexPath.row].year
         celda.precioLabel.text =    "Precio:    " + auto[indexPath.row].price
         celda.puertasLabel.text  =  "N° Puertas:" + auto[indexPath.row].puertas
+        celda.obtenerButton.tag = auto[indexPath.row].id
+        //celda.btnDelegate = self
         
         if let url = URL(string: auto[indexPath.row].img_url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
                 
                 DispatchQueue.main.async {
-                    celda.imageCar.image = UIImage(data: data)/// execute on main threadself.imageView.image = UIImage(data: data)
+                    celda.imageCar.image = UIImage(data: data)
                 }
             }
-            
             task.resume()
         }
-        
-        
-        
-       /* if let url = "https://www.elcarrocolombiano.com/wp-content/uploads/2021/01/20210124-LOS-10-CARROS-MAS-VENDIDOS-DEL-MUNDO-EN-2020-01.jpg" {
-            if let imageUrl = URL(string: url) {
-                DispatchQueue.main.async {
-                    guard let imageData = try? Data(contentsOf: imageUrl) else {
-                        return
-                    }
-                    let image = UIImage (data: imageData)
-                    DispatchQueue.main.async {
-                        celda.imageCar.image = image
-                    }
-                }
-                
-            }
-        }*/
         return celda
-        
         }
-}
-
-
-
-
-
-
-
-
-
-/* let urlString = "https://private-anon-1fc702871f-carsapi1.apiary-mock.com/cars"
-
-if let url = URL(string: urlString){
-    if let data = try? Data(contentsOf: url){
-        let decodificador = JSONDecoder()
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        autoSeleccionado = auto[indexPath.row]
         
-        if let datosDecodificados = try? decodificador.decode([ModelCar].self, from: data){
-            auto = datosDecodificados
-            carTableView.reloadData()
+        performSegue(withIdentifier: "go", sender: self)
+        carTableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "go" {
+            let vcLlegada = segue.destination as! BuyViewController
+            vcLlegada.carroData = autoSeleccionado
         }
+        
+        
+    }
+    
+    @IBAction func DistanceSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            LocationManager.shared.getLocation()
+            print("GPS Activado")
+            
+        }else{
+
+            print("GPS Desactivado")
+            
     }
 }
-*/
+}
+/*extension SearchViewController : PressButtonDelegate {
+    func goBuyView (idCar : Int){
+        performSegue(withIdentifier: "go", sender: idCar)
+        print("")
+    }
+    
+}*/

@@ -24,9 +24,6 @@ class LoginViewController: UIViewController {
         if let email = usernameText.text , let password = passwordText.text {
             Auth.auth().signIn(withEmail: email , password: password, completion: {(user, error) in print("Intentando Iniciar Sesion")
                 if error != nil{
-                    
-                    
-                        
                         let alerta = UIAlertController(title: "Error al iniciar Sesion", message: "Usuario: \(self.usernameText.text!) No esta Registrado", preferredStyle: .alert)
                         let btnCancelar = UIAlertAction(title: "Cancelar", style: .default)
                         let btnCrear = UIAlertAction(title: "Crear",
@@ -35,7 +32,6 @@ class LoginViewController: UIViewController {
                             let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpVC") as! SiginViewController
                             vc.definesPresentationContext = true
                             vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-//                            self.present(vc, animated: true, completion: nil)
                             self.navigationController?.pushViewController(vc, animated: true)
                         }
                         )

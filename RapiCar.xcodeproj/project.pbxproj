@@ -10,7 +10,8 @@
 		84797F0A287B2D2600FA4503 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 84797F09287B2D2600FA4503 /* data.json */; };
 		84797F0E287B63DE00FA4503 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F0D287B63DE00FA4503 /* MapViewController.swift */; };
 		84797F11287B7B8F00FA4503 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F10287B7B8F00FA4503 /* MyLocation.swift */; };
-		84797F13287B871C00FA4503 /* PointDistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F12287B871C00FA4503 /* PointDistance.swift */; };
+		84797F1B287C8A3800FA4503 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F1A287C8A3800FA4503 /* Repository.swift */; };
+		84797F21287C9FB000FA4503 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F20287C9FB000FA4503 /* BuyViewController.swift */; };
 		849C64262873428D00D1B2C8 /* Pods_RapiCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512A8120063E602D567C5E9F /* Pods_RapiCar.framework */; };
 		849C643F28789CE700D1B2C8 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C643D28789CE700D1B2C8 /* CardTableViewCell.swift */; };
 		849C644028789CE700D1B2C8 /* CardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 849C643E28789CE700D1B2C8 /* CardTableViewCell.xib */; };
@@ -32,7 +33,8 @@
 		84797F09287B2D2600FA4503 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = RapiCar/DataCar/data.json; sourceTree = SOURCE_ROOT; };
 		84797F0D287B63DE00FA4503 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		84797F10287B7B8F00FA4503 /* MyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
-		84797F12287B871C00FA4503 /* PointDistance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointDistance.swift; sourceTree = "<group>"; };
+		84797F1A287C8A3800FA4503 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		84797F20287C9FB000FA4503 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		849C64222873427A00D1B2C8 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C643D28789CE700D1B2C8 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		849C643E28789CE700D1B2C8 /* CardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardTableViewCell.xib; sourceTree = "<group>"; };
@@ -95,9 +97,18 @@
 			isa = PBXGroup;
 			children = (
 				84797F10287B7B8F00FA4503 /* MyLocation.swift */,
-				84797F12287B871C00FA4503 /* PointDistance.swift */,
+				84797F0D287B63DE00FA4503 /* MapViewController.swift */,
 			);
 			path = Maps;
+			sourceTree = "<group>";
+		};
+		84797F22287CA96B00FA4503 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				84A911802869FFE00095749C /* SearchViewController.swift */,
+			);
+			name = Search;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		849C64322874AF5C00D1B2C8 /* AutenticationUser */ = {
@@ -133,9 +144,10 @@
 				84A91160286927B50095749C /* AppDelegate.swift */,
 				84A91162286927B50095749C /* SceneDelegate.swift */,
 				84A91166286927B50095749C /* Main.storyboard */,
-				84797F0D287B63DE00FA4503 /* MapViewController.swift */,
+				84797F20287C9FB000FA4503 /* BuyViewController.swift */,
 				84A91164286927B50095749C /* ViewController.swift */,
-				84A911802869FFE00095749C /* SearchViewController.swift */,
+				84797F1A287C8A3800FA4503 /* Repository.swift */,
+				84797F22287CA96B00FA4503 /* Search */,
 				84797F0F287B7B7700FA4503 /* Maps */,
 				84797F0C287B618200FA4503 /* DataCar */,
 				849C64322874AF5C00D1B2C8 /* AutenticationUser */,
@@ -279,12 +291,13 @@
 				84A9117D2869FFC70095749C /* LoginViewController.swift in Sources */,
 				84A91165286927B50095749C /* ViewController.swift in Sources */,
 				84A91161286927B50095749C /* AppDelegate.swift in Sources */,
+				84797F21287C9FB000FA4503 /* BuyViewController.swift in Sources */,
+				84797F1B287C8A3800FA4503 /* Repository.swift in Sources */,
 				84A91163286927B50095749C /* SceneDelegate.swift in Sources */,
 				84797F11287B7B8F00FA4503 /* MyLocation.swift in Sources */,
 				84A9117F2869FFD60095749C /* SiginViewController.swift in Sources */,
 				849C643F28789CE700D1B2C8 /* CardTableViewCell.swift in Sources */,
 				84797F0E287B63DE00FA4503 /* MapViewController.swift in Sources */,
-				84797F13287B871C00FA4503 /* PointDistance.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

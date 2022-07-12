@@ -4,10 +4,15 @@
 //
 //  Created by Nttdata on 8/07/22.
 //
-
 import UIKit
 
-class CardTableViewCell: UITableViewCell {
+
+protocol PressButtonDelegate : AnyObject {
+     
+    func goBuyView (idCar: Int)
+    
+}
+class CardTableViewCell: UITableViewCell  {
 
     @IBOutlet weak var imageCar: UIImageView!
     @IBOutlet weak var marcaLabel: UILabel!
@@ -15,10 +20,11 @@ class CardTableViewCell: UITableViewCell {
     @IBOutlet weak var añoLabel: UILabel!
     @IBOutlet weak var precioLabel: UILabel!
     @IBOutlet weak var puertasLabel: UILabel!
+    @IBOutlet weak var distanciaLabel: UILabel!
     
+    @IBOutlet weak var obtenerButton: UIButton!
     
-    
-    
+    weak var btnDelegate : PressButtonDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,5 +36,12 @@ class CardTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+    @IBAction func obtenerButton(_ sender: UIButton) {
+        print("Se presiono el boton")
+        self.btnDelegate?.goBuyView(idCar: self.obtenerButton.tag)
+       
+    }
 }
+    
+    
+

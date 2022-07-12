@@ -51,7 +51,6 @@ class SiginViewController: UIViewController {
                         "Nombre":textName.text ?? "",
                         "Apellido":textLastName.text ?? "",
                         "Celular": textPhone.text ?? " " ,
-                        
                         "Fecha de Nacimiento": textDateOfBirth.text ?? " "])
                     
                     let alerta = UIAlertController(title: "Creacion De Usuario", message: "Usuario se creo correctamente ", preferredStyle: .alert)
