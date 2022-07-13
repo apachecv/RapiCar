@@ -94,7 +94,7 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
         celda.marcaLabel.text = autoFiltrado[indexPath.row].make
         celda.modeloLabel.text =  autoFiltrado[indexPath.row].model
-        celda.precioLabel.text =  autoFiltrado[indexPath.row].price
+        celda.precioLabel.text =  "S/" + autoFiltrado[indexPath.row].price
         celda.puertasLabel.text  =  autoFiltrado[indexPath.row].puertas
         celda.pasajerosLabel.text = autoFiltrado[indexPath.row].pasajeros
         if autoFiltrado[indexPath.row].disponible == true {

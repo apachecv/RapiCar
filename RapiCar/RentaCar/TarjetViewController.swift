@@ -9,9 +9,9 @@ import UIKit
 import FirebaseFirestore
 
 class TarjetViewController: UIViewController {
-    @IBOutlet weak var numeroTarjeta: UITextField!
-    @IBOutlet weak var mesAño: UITextField!
-    @IBOutlet weak var cvv: UITextField!
+ 
+    @IBOutlet weak var fecha: UITextField!
+    @IBOutlet weak var dni: UITextField!
     @IBOutlet weak var nombres: UITextField!
     @IBOutlet weak var apellidos: UITextField!
     @IBOutlet weak var email: UITextField!
@@ -23,15 +23,14 @@ class TarjetViewController: UIViewController {
     }
     private let database = Firestore.firestore()
     @IBAction func Compra(_ sender: Any) {
-        self.database.collection("Clientes").document("\(self.nombres.text ?? "" )  \(self.apellidos.text ?? "")").setData([
+        self.database.collection("Solitudes de Renta").document("\(self.nombres.text ?? "" )  \(self.apellidos.text ?? "")").setData([
             "Nombre":nombres.text ?? "",
             "Apellido":apellidos.text ?? "",
-            "Tarjeta": numeroTarjeta.text ?? " " ,
-            "Mes//Año": mesAño.text ?? " ",
-            "Cvv": cvv.text ?? " ",
+            "DNI":dni.text ?? "",
+            "Fecha":fecha.text ?? "",
             "email": email.text ?? " "])
         
-        let alerta = UIAlertController(title: "Compra Exitosa", message: "Desea volver al menu? ", preferredStyle: .alert)
+        let alerta = UIAlertController(title: "Solicitud Exitosa", message: "Desea volver al menu? ", preferredStyle: .alert)
         let btnAceptar = UIAlertAction(title: "Aceptar" ,
                                   style: .default,
                                   handler: {(UIAlertAction)in

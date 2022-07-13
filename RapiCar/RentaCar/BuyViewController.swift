@@ -17,6 +17,7 @@ class BuyViewController: UIViewController {
     @IBOutlet weak var caballosLabel: UILabel!
     @IBOutlet weak var pasajerosLabel: UILabel!
     @IBOutlet weak var precioLabel: UILabel!
+    @IBOutlet weak var mensajeLabel: UILabel!
     @IBOutlet weak var compraButton: UIButton!
     
     var carroData : ModelCar?
@@ -29,11 +30,22 @@ class BuyViewController: UIViewController {
         puertasLabel.text = carroData?.puertas
         caballosLabel.text = carroData?.horsepower
         pasajerosLabel.text = carroData?.pasajeros
-        precioLabel.text = carroData?.price
+        precioLabel.text = "S/" + carroData!.price 
         image.loadFrom(URLAddres: carroData?.img_url ?? "")
-        
+        mensajeLabel.text = " "
+        if carroData!.disponible == false {
+            
+            compraButton.isHidden = true
+            mensajeLabel.text = "Lo sentimos, el vehiculo no esta disponible"
+            print("valor:")
+            print(carroData!.disponible)
+        }
+        }
     }
-}
+    
+    
+    
+
 extension UIImageView {
     func loadFrom(URLAddres: String){
         guard let url = URL(string: URLAddres) else{return}
