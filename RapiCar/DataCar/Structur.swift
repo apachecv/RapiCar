@@ -22,6 +22,7 @@ struct ModelCar : Codable , Identifiable {
       let pasajeros    : String
       let latitude     : Double
       let length       : Double
+      let disponible   : Bool
     
         var distance : Double {
             let myLength = LocationManager.shared.location!.longitude

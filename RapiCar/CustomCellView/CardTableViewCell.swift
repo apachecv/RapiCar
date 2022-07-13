@@ -17,12 +17,12 @@ class CardTableViewCell: UITableViewCell  {
     @IBOutlet weak var imageCar: UIImageView!
     @IBOutlet weak var marcaLabel: UILabel!
     @IBOutlet weak var modeloLabel: UILabel!
-    @IBOutlet weak var añoLabel: UILabel!
     @IBOutlet weak var precioLabel: UILabel!
     @IBOutlet weak var puertasLabel: UILabel!
     @IBOutlet weak var distanciaLabel: UILabel!
     @IBOutlet weak var pasajerosLabel: UILabel!
     @IBOutlet weak var obtenerButton: UIButton!
+    @IBOutlet weak var disponibleLabel: UILabel!
     
     weak var btnDelegate : PressButtonDelegate?
     

@@ -36,56 +36,46 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="qps-5l-fpC">
-                        <rect key="frame" x="245" y="41" width="130" height="160"/>
+                        <rect key="frame" x="245" y="41" width="144" height="160"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Puertas:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eXf-zD-R0f">
-                                <rect key="frame" x="82" y="29" width="42" height="21"/>
+                                <rect key="frame" x="82" y="49" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRD-yz-I3i">
-                                <rect key="frame" x="82" y="70" width="48" height="21"/>
+                                <rect key="frame" x="82" y="90" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="puerta icono" translatesAutoresizingMaskIntoConstraints="NO" id="F6f-oL-A6A">
-                                <rect key="frame" x="35" y="29" width="37" height="29"/>
+                                <rect key="frame" x="35" y="49" width="37" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="billeteicono" translatesAutoresizingMaskIntoConstraints="NO" id="E2c-z6-X2O">
-                                <rect key="frame" x="35" y="66" width="37" height="29"/>
+                                <rect key="frame" x="35" y="86" width="37" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pasajero-icono" translatesAutoresizingMaskIntoConstraints="NO" id="XKJ-C9-PaR">
-                                <rect key="frame" x="35" y="104" width="37" height="29"/>
+                                <rect key="frame" x="35" y="123" width="37" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kx-wg-OFA">
-                                <rect key="frame" x="6" y="141" width="118" height="19"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="obtenerButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4IU-eu-6qN"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pasajeros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uhB-sA-ko3">
-                                <rect key="frame" x="82" y="112" width="48" height="21"/>
+                                <rect key="frame" x="82" y="131" width="48" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-Xd-aPi">
-                                <rect key="frame" x="36" y="0.0" width="94" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NjU-HH-RRm">
+                                <rect key="frame" x="4" y="11" width="132" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -105,12 +95,11 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="tintColor" systemColor="labelColor"/>
             <connections>
-                <outlet property="añoLabel" destination="0Of-Xd-aPi" id="FaQ-Yh-Vlp"/>
+                <outlet property="disponibleLabel" destination="NjU-HH-RRm" id="z7P-Ug-o5t"/>
                 <outlet property="distanciaLabel" destination="awR-Dc-2Ur" id="Wwt-0q-hZL"/>
                 <outlet property="imageCar" destination="oYy-4e-70l" id="R1E-GS-7wk"/>
                 <outlet property="marcaLabel" destination="5xo-l8-X7J" id="13U-y2-pDc"/>
                 <outlet property="modeloLabel" destination="P0j-8X-HKZ" id="lsN-eo-J6U"/>
-                <outlet property="obtenerButton" destination="2kx-wg-OFA" id="4F8-G3-hxu"/>
                 <outlet property="pasajerosLabel" destination="uhB-sA-ko3" id="FXt-lz-nxh"/>
                 <outlet property="precioLabel" destination="uRD-yz-I3i" id="qla-Gk-tbj"/>
                 <outlet property="puertasLabel" destination="eXf-zD-R0f" id="BtP-pX-9uW"/>

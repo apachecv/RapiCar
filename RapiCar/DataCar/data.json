@@ -1,5 +1,19 @@
 [
     {
+        "horsepower": "455",
+        "id": 12,
+        "img_url": "https://acnews.blob.core.windows.net/imgnews/medium/NAZ_53a5fa14d3914493a13a92a51b3d587a.jpg",
+        "make": "chevrolet",
+        "model": "camaro",
+        "price": "300",
+        "year": "2016",
+        "puertas":"2",
+        "pasajeros":"2",
+        "latitude": -6.776705,
+        "length": -79.830139,
+        "disponible": true
+    },
+    {
         "horsepower": "132",
         "id": 32,
         "img_url": "https://www.toyotacorolla.com.pe/assets/images/corolla-rojo.png",
@@ -10,7 +24,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.779259,
-        "length":  -79.840848
+        "length":  -79.840848,
+        "disponible": false
     },
     {
         "horsepower": "381",
@@ -23,7 +38,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude":-6.759296,
-        "length":-79.854147
+        "length":-79.854147,
+        "disponible": true
     },
     {
         "horsepower": "450",
@@ -36,7 +52,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -5.181631,
-        "length": -80.674875
+        "length": -80.674875,
+        "disponible": true
     },
     {
         "horsepower": "540",
@@ -49,7 +66,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude":-13.166553,
-        "length": -74.219171
+        "length": -74.219171,
+        "disponible": false
     },
     {
         "horsepower": "292",
@@ -62,7 +80,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.164902,
-        "length": -74.221757
+        "length": -74.221757,
+        "disponible": true
     },
     {
         "horsepower": "445",
@@ -75,7 +94,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.527243,
-        "length": -71.963211
+        "length": -71.963211,
+        "disponible": true
     },
     {
         "horsepower": "552",
@@ -88,7 +108,8 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -6.763576,
-        "length": -79.865969
+        "length": -79.865969,
+        "disponible": true
     },
     {
         "horsepower": "500",
@@ -101,7 +122,8 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -13.525167,
-        "length": -71.964252
+        "length": -71.964252,
+        "disponible": true
     },
     {
         "horsepower": "540",
@@ -114,7 +136,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.523289,
-        "length": -71.962825
+        "length": -71.962825,
+        "disponible": true
     },
     {
         "horsepower": "552",
@@ -127,7 +150,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -16.399150,
-        "length": -71.537639
+        "length": -71.537639,
+        "disponible": false
     },
     {
         "horsepower": "505",
@@ -140,7 +164,8 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -16.416496,
-        "length": -71.509560
+        "length": -71.509560,
+        "disponible": true
     },
     {
         "horsepower": "250",
@@ -153,7 +178,8 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -16.409480,
-        "length": -71.496834
+        "length": -71.496834,
+        "disponible": true
     },
     {
         "horsepower": "410",
@@ -166,20 +192,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.076303,
-        "length": -77.015364
-    },
-    {
-        "horsepower": "455",
-        "id": 12,
-        "img_url": "https://acnews.blob.core.windows.net/imgnews/medium/NAZ_53a5fa14d3914493a13a92a51b3d587a.jpg",
-        "make": "chevrolet",
-        "model": "camaro",
-        "price": "300",
-        "year": "2016",
-        "puertas":"2",
-        "pasajeros":"2",
-        "latitude": -6.776705,
-        "length": -79.830139
+        "length": -77.015364,
+        "disponible": true
     },
     {
         "horsepower": "460",
@@ -192,7 +206,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.786656,
-        "length": -79.840001
+        "length": -79.840001,
+        "disponible": true
     },
     {
         "horsepower": "553",
@@ -205,7 +220,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -8.126992,
-        "length": -79.038566
+        "length": -79.038566,
+        "disponible": true
     },
     {
         "horsepower": "168",
@@ -218,7 +234,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -7.157739,
-        "length": -78.519138
+        "length": -78.519138,
+        "disponible": true
     },
     {
         "horsepower": "290",
@@ -231,7 +248,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.036989,
-        "length": -77.028038
+        "length": -77.028038,
+        "disponible": false
     },
     {
         "horsepower": "197",
@@ -244,7 +262,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.054965,
-        "length": -77.124557
+        "length": -77.124557,
+        "disponible": true
     },
     {
         "horsepower": "435",
@@ -257,7 +276,8 @@
         "puertas":"2",
         "pasajeros":"4",
         "latitude": -12.102557,
-        "length": -77.036399
+        "length": -77.036399,
+        "disponible": true
     },
     {
         "horsepower": "137",
@@ -270,7 +290,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -11.975153,
-        "length": -77.076129
+        "length": -77.076129,
+        "disponible": true
     },
     {
         "horsepower": "293",
@@ -283,7 +304,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -11.969482,
-        "length": -77.001131
+        "length": -77.001131,
+        "disponible": false
     },
     {
         "horsepower": "147",
@@ -296,7 +318,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.758689,
-        "length":   -79.857934
+        "length":   -79.857934,
+        "disponible": true
     },
     {
         "horsepower": "290",
@@ -309,7 +332,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -7.179990,
-        "length": -79.438577
+        "length": -79.438577,
+        "disponible": true
     },
     {
         "horsepower": "175",
@@ -322,7 +346,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.834276,
-        "length": -79.933241
+        "length": -79.933241,
+        "disponible": true
     },
     {
         "horsepower": "201",
@@ -335,7 +360,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.635086,
-        "length": -79.786534
+        "length": -79.786534,
+        "disponible": true
     },
     {
         "horsepower": "290",
@@ -348,7 +374,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude":-6.637164,
-        "length": -79.790278
+        "length": -79.790278,
+        "disponible": true
     },
     {
         "horsepower": "138",
@@ -361,7 +388,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.769915,
-        "length": -79.775890
+        "length": -79.775890,
+        "disponible": true
     },
     {
         "horsepower": "610",
@@ -374,7 +402,8 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.784207,
-        "length": -79.842216
+        "length": -79.842216,
+        "disponible": true
     },
     {
         "horsepower": "134",
@@ -387,7 +416,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.781671,
-        "length": -79.846379
+        "length": -79.846379,
+        "disponible": true
     },
     {
         "horsepower": "261",
@@ -400,7 +430,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -8.105070,
-        "length": -79.045136
+        "length": -79.045136,
+        "disponible": true
     },
     {
         "horsepower": "130",
@@ -413,7 +444,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.767401,
-        "length": -79.868498
+        "length": -79.868498,
+        "disponible": true
     },
     {
         "horsepower": "109",
@@ -426,7 +458,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.763357,
-        "length": -79.864450
+        "length": -79.864450,
+        "disponible": true
     },
     {
         "horsepower": "106",
@@ -439,7 +472,8 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.760438,
-        "length": -79.834242
+        "length": -79.834242,
+        "disponible": false
     }
 ]
 

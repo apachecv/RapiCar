@@ -94,10 +94,15 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
         let celda = carTableView.dequeueReusableCell(withIdentifier: "cellcar" , for: indexPath) as! CardTableViewCell
         celda.marcaLabel.text = autoFiltrado[indexPath.row].make
         celda.modeloLabel.text =  autoFiltrado[indexPath.row].model
-        celda.añoLabel.text =  "Año:" + autoFiltrado[indexPath.row].year
         celda.precioLabel.text =  autoFiltrado[indexPath.row].price
         celda.puertasLabel.text  =  autoFiltrado[indexPath.row].puertas
         celda.pasajerosLabel.text = autoFiltrado[indexPath.row].pasajeros
+        if autoFiltrado[indexPath.row].disponible == true {
+            celda.disponibleLabel.text = "✅ Disponible"
+        }else{
+            celda.disponibleLabel.text = "❌ No Disponible"
+        }
+        
         
         if let url = URL(string: autoFiltrado[indexPath.row].img_url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in guard let data = data, error == nil else { return }
@@ -117,11 +122,13 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
         
         performSegue(withIdentifier: "go", sender: self)
         carTableView.deselectRow(at: indexPath, animated: true)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "go" {
             let vcLlegada = segue.destination as! BuyViewController
             vcLlegada.carroData = autoSeleccionado
+            
         }
         
         

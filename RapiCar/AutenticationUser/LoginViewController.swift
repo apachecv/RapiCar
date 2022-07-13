@@ -46,6 +46,8 @@ class LoginViewController: UIViewController {
                     let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Svc") as! SearchViewController
                     vc.definesPresentationContext = true
                     vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+                    //self.navigationController?.pushViewController(vc, animated: true)
+                    //self.navigationController?.show(vc , sender: true)
                     self.present(vc, animated: true, completion: nil)
                 }
             }
