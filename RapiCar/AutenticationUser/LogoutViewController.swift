@@ -25,7 +25,12 @@ class LogoutViewController: UIViewController {
         telefonoLabel.text = "Telefono:            " + usuarioLogueado!.telefono
         
     }
-
+    
+    @IBAction func atrasBtnn(_ sender: UIButton) {
+        _ = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "lvc") as! LoginViewController
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func btnn(_ sender: UIButton) {
         
         try! Auth.auth().signOut()
@@ -34,8 +39,7 @@ class LogoutViewController: UIViewController {
             
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "vc") as! ViewController
         
-            vc.modalPresentationStyle = .fullScreen
-            self.showDetailViewController(vc, sender: true)
+            self.navigationController?.pushViewController(vc, animated: true)
                 }
       
         }

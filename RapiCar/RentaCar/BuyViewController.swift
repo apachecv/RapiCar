@@ -41,7 +41,9 @@ class BuyViewController: UIViewController {
             print(carroData!.disponible)
         }
         }
-    
+    @IBAction func atrasBtnn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func usserInfo(_ sender: Any) {
     }
     

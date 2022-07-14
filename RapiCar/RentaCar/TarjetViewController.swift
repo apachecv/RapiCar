@@ -23,11 +23,13 @@ class TarjetViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func usserInfo(_ sender: UIButton) {
-        
     }
     
-    
+    @IBAction func atrasBtnn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     private let database = Firestore.firestore()
     @IBAction func Compra(_ sender: Any) {
         

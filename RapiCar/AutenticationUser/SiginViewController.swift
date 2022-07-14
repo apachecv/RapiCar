@@ -31,6 +31,11 @@ class SiginViewController: UIViewController {
     
    
     private let database = Firestore.firestore()
+    
+    
+    @IBAction func atrasBtnn(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
     @IBAction func register(_ sender: Any) {
         if textName.text == "" || textLastName.text == "" || textUserEmail.text == "" || textPassword.text == "" || textPhone.text == "" || textDateOfBirth.text == "" {
             print("Alerta")

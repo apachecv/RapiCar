@@ -26,6 +26,10 @@ class LoginViewController: UIViewController {
     
     
     //Editar funciones de los buttons:
+    @IBAction func atrasBtnn(_ sender: UIButton) {
+        _ = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "lvc") as! LoginViewController
+        self.navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func loginUsser(_ sender: Any) {
         if  usernameText.text == "" || passwordText.text == "" {
@@ -70,7 +74,7 @@ class LoginViewController: UIViewController {
                     }
                 }else{
                     print("Inicio de Sesion Exitoso")
-                    let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Svc") as! SearchViewController
+                    let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "svc") as! SearchViewController
                     self.navigationController?.pushViewController(vc, animated: true)
                     //self.navigationController?.show(vc , sender: true)
                     //self.navigationController?.pushViewController(vc, animated: true)

@@ -16,7 +16,7 @@ class SearchViewController: UIViewController  {
     @IBOutlet weak var carTableView  : UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
-    @IBOutlet weak var backBttn: UINavigationItem!
+
     var auto : [ModelCar] = []
     var autoSeleccionado : ModelCar?
     var autoFiltrado : [ModelCar] = []
@@ -24,7 +24,7 @@ class SearchViewController: UIViewController  {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        carTableView.rowHeight = 220
+        carTableView.rowHeight = 210
         carTableView.register(UINib(nibName: "CardTableViewCell", bundle: nil),    forCellReuseIdentifier: "cellcar")
         carTableView.delegate = self
         carTableView.dataSource = self
@@ -33,7 +33,6 @@ class SearchViewController: UIViewController  {
 
     }
     @IBAction func usserInfo(_ sender: UIButton) {
-        print("presion")
     }
     
     func getCarData(){
