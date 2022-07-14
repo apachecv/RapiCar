@@ -24,12 +24,12 @@ struct ModelCar : Codable , Identifiable {
       let length       : Double
       let disponible   : Bool
     
-        var distance : Double {
-            let myLength = LocationManager.shared.location!.longitude
-            let myLatitude =  LocationManager.shared.location!.latitude
-            let selfLocation = CLLocation(latitude: myLatitude, longitude: myLength)
+        /*var distance : Double {
+            //let myLength = LocationManager.shared.location!.longitude
+            //let myLatitude =  LocationManager.shared.location!.latitude
+            //let selfLocation = CLLocation(latitude: myLatitude, longitude: myLength)
             let location = CLLocation(latitude: latitude, longitude: length)
-            let distance = selfLocation.distance(from: location)/1000
+            //let distance = selfLocation.distance(from: location)/1000
             return distance
-        }
+        }*/
     }

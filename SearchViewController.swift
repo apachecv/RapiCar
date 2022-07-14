@@ -16,6 +16,7 @@ class SearchViewController: UIViewController  {
     @IBOutlet weak var carTableView  : UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var backBttn: UINavigationItem!
     var auto : [ModelCar] = []
     var autoSeleccionado : ModelCar?
     var autoFiltrado : [ModelCar] = []
@@ -30,6 +31,9 @@ class SearchViewController: UIViewController  {
         getCarData()
         searchBar.delegate = self
 
+    }
+    @IBAction func usserInfo(_ sender: UIButton) {
+        print("presion")
     }
     
     func getCarData(){
@@ -128,15 +132,14 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
         if segue.identifier == "go" {
             let vcLlegada = segue.destination as! BuyViewController
             vcLlegada.carroData = autoSeleccionado
-            
         }
-        
-        
     }
+    
+        
     
     @IBAction func DistanceSwitch(_ sender: UISwitch) {
         if sender.isOn {
-            LocationManager.shared.getLocation()
+            //LocationManager.shared.getLocation()
             print("GPS Activado")
             
             

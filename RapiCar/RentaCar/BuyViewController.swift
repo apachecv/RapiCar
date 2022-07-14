@@ -41,6 +41,10 @@ class BuyViewController: UIViewController {
             print(carroData!.disponible)
         }
         }
+    
+    @IBAction func usserInfo(_ sender: Any) {
+    }
+    
     }
     
     

@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84181D25287F08D30071A1B7 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84181D24287F08D30071A1B7 /* LogoutViewController.swift */; };
+		8448878F2880707300FDF508 /* UsserStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8448878E2880707300FDF508 /* UsserStruct.swift */; };
 		84797F0A287B2D2600FA4503 /* data.json in Resources */ = {isa = PBXBuildFile; fileRef = 84797F09287B2D2600FA4503 /* data.json */; };
-		84797F0E287B63DE00FA4503 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F0D287B63DE00FA4503 /* MapViewController.swift */; };
-		84797F11287B7B8F00FA4503 /* MyLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F10287B7B8F00FA4503 /* MyLocation.swift */; };
 		84797F21287C9FB000FA4503 /* BuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F20287C9FB000FA4503 /* BuyViewController.swift */; };
 		84797F29287D42C200FA4503 /* Structur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F28287D42C200FA4503 /* Structur.swift */; };
-		84797F2B287D43F900FA4503 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797F2A287D43F900FA4503 /* Repository.swift */; };
 		8479BC94287DC8BE00DF21A3 /* TarjetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BC93287DC8BE00DF21A3 /* TarjetViewController.swift */; };
 		849C64262873428D00D1B2C8 /* Pods_RapiCar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 512A8120063E602D567C5E9F /* Pods_RapiCar.framework */; };
 		849C643F28789CE700D1B2C8 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849C643D28789CE700D1B2C8 /* CardTableViewCell.swift */; };
@@ -31,13 +30,12 @@
 
 /* Begin PBXFileReference section */
 		512A8120063E602D567C5E9F /* Pods_RapiCar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RapiCar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84181D24287F08D30071A1B7 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		8448878E2880707300FDF508 /* UsserStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsserStruct.swift; sourceTree = "<group>"; };
 		84797F062879FF5300FA4503 /* JsonLocal.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = JsonLocal.xcconfig; sourceTree = "<group>"; };
 		84797F09287B2D2600FA4503 /* data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = data.json; path = RapiCar/DataCar/data.json; sourceTree = SOURCE_ROOT; };
-		84797F0D287B63DE00FA4503 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		84797F10287B7B8F00FA4503 /* MyLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLocation.swift; sourceTree = "<group>"; };
 		84797F20287C9FB000FA4503 /* BuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyViewController.swift; sourceTree = "<group>"; };
 		84797F28287D42C200FA4503 /* Structur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structur.swift; sourceTree = "<group>"; };
-		84797F2A287D43F900FA4503 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		8479BC93287DC8BE00DF21A3 /* TarjetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetViewController.swift; sourceTree = "<group>"; };
 		849C64222873427A00D1B2C8 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		849C643D28789CE700D1B2C8 /* CardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -98,20 +96,10 @@
 			path = DataCar;
 			sourceTree = "<group>";
 		};
-		84797F0F287B7B7700FA4503 /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				84797F10287B7B8F00FA4503 /* MyLocation.swift */,
-				84797F0D287B63DE00FA4503 /* MapViewController.swift */,
-			);
-			path = Maps;
-			sourceTree = "<group>";
-		};
 		84797F22287CA96B00FA4503 /* Search */ = {
 			isa = PBXGroup;
 			children = (
 				84A911802869FFE00095749C /* SearchViewController.swift */,
-				84797F2A287D43F900FA4503 /* Repository.swift */,
 			);
 			name = Search;
 			path = ..;
@@ -131,6 +119,7 @@
 			children = (
 				84A9117C2869FFC70095749C /* LoginViewController.swift */,
 				84A9117E2869FFD60095749C /* SiginViewController.swift */,
+				84181D24287F08D30071A1B7 /* LogoutViewController.swift */,
 			);
 			path = AutenticationUser;
 			sourceTree = "<group>";
@@ -159,10 +148,10 @@
 				84A91160286927B50095749C /* AppDelegate.swift */,
 				84A91162286927B50095749C /* SceneDelegate.swift */,
 				84A91164286927B50095749C /* ViewController.swift */,
+				8448878E2880707300FDF508 /* UsserStruct.swift */,
 				84A91166286927B50095749C /* Main.storyboard */,
 				84797F23287D304D00FA4503 /* RentaCar */,
 				84797F22287CA96B00FA4503 /* Search */,
-				84797F0F287B7B7700FA4503 /* Maps */,
 				84797F0C287B618200FA4503 /* DataCar */,
 				849C64322874AF5C00D1B2C8 /* AutenticationUser */,
 				84797F0B287B614C00FA4503 /* CustomCellView */,
@@ -305,15 +294,14 @@
 				84A911812869FFE00095749C /* SearchViewController.swift in Sources */,
 				84A9117D2869FFC70095749C /* LoginViewController.swift in Sources */,
 				84A91165286927B50095749C /* ViewController.swift in Sources */,
+				84181D25287F08D30071A1B7 /* LogoutViewController.swift in Sources */,
 				84A91161286927B50095749C /* AppDelegate.swift in Sources */,
 				84797F21287C9FB000FA4503 /* BuyViewController.swift in Sources */,
 				8479BC94287DC8BE00DF21A3 /* TarjetViewController.swift in Sources */,
 				84A91163286927B50095749C /* SceneDelegate.swift in Sources */,
-				84797F11287B7B8F00FA4503 /* MyLocation.swift in Sources */,
 				84A9117F2869FFD60095749C /* SiginViewController.swift in Sources */,
 				849C643F28789CE700D1B2C8 /* CardTableViewCell.swift in Sources */,
-				84797F0E287B63DE00FA4503 /* MapViewController.swift in Sources */,
-				84797F2B287D43F900FA4503 /* Repository.swift in Sources */,
+				8448878F2880707300FDF508 /* UsserStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
