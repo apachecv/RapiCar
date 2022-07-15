@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController  {
+    
+    
+    
+    @IBOutlet weak var btton: UIButton!
+    
     @IBAction func login(_ sender: UIButton) {
         print("Login")
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "lvc") as! LoginViewController
@@ -20,12 +24,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func pass(_ sender: Any) {
+        
         print("pass")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Rapicar"
+        
 
     }
 

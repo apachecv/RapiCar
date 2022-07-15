@@ -85,13 +85,7 @@ class LoginViewController: UIViewController {
                         guard let apellido = data["Apellido"]as? String else{return}
                         guard let telefono = data["Celular"]as? String else {return}
                         guard let fechaNacimiento = data["Fecha de Nacimiento"]as? String else {return}
-                        
-                        print(nombre)
-                        print(apellido)
-                        print(telefono)
-                        print(fechaNacimiento)
                         usuarioLogueado = Usser(email: email , name: nombre, apellido: apellido, telefono: telefono, fechaNacimiento: fechaNacimiento)
-                        
                        
                        }
                             }

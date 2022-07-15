@@ -10,19 +10,22 @@ import Foundation
 import MapKit
 import CoreLocation
 
-class SearchViewController: UIViewController  {
+class SearchViewController: UIViewController  , CLLocationManagerDelegate {
     
     @IBOutlet weak var titleSearchCar: UILabel!
     @IBOutlet weak var carTableView  : UITableView!
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var filterbtton: UIButton!
     
-
+    
     var auto : [ModelCar] = []
     var autoSeleccionado : ModelCar?
     var autoFiltrado : [ModelCar] = []
+    var filtroDistancia : [ModelCar] = []
+    
+    
     
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         carTableView.rowHeight = 210
         carTableView.register(UINib(nibName: "CardTableViewCell", bundle: nil),    forCellReuseIdentifier: "cellcar")
@@ -30,9 +33,48 @@ class SearchViewController: UIViewController  {
         carTableView.dataSource = self
         getCarData()
         searchBar.delegate = self
-
+    
     }
     @IBAction func usserInfo(_ sender: UIButton) {
+    }
+    
+    
+    @IBAction func distancefilter(_ sender: UIButton) {
+        MyLocation.shared.getLocation()
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .authorizedAlways , .authorizedWhenInUse :
+            autoFiltrado = autoFiltrado.sorted(by: {$0.distance < $1.distance})
+            self.carTableView.reloadData()
+            print("a")
+        case .notDetermined , .restricted :
+            print("b")
+
+        case .denied  :
+    
+            let alertController = UIAlertController (title: "Error", message: "Debe activar la ubicaion. Deseas hacerlo?", preferredStyle: .alert)
+            
+                let btnAceptar = UIAlertAction(title: "Ir a Configuracion", style: .default) { (_) -> Void in
+
+                    guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
+                        return
+                    }
+
+                    if UIApplication.shared.canOpenURL(settingsUrl) {
+                        UIApplication.shared.open(settingsUrl,options: [:] , completionHandler: { (success) in
+                            print("Settings opened: \(success)") // Prints true
+                        })
+                    }
+                }
+                alertController.addAction(btnAceptar)
+            
+                let cancelAction = UIAlertAction(title: "Cerrar", style: .default, handler: nil)
+                alertController.addAction(cancelAction)
+            present(alertController, animated: true, completion: nil)
+            print("c")
+        @unknown default:
+            fatalError()
+        }
     }
     
     func getCarData(){
@@ -56,7 +98,7 @@ class SearchViewController: UIViewController  {
                     self.autoFiltrado = self.auto
                     self.carTableView.reloadData()
                 }
-                print("---->> hola data:: \(carData)")
+                //print("---->> hola data:: \(carData)")
                 
             }catch{
                 print("---->> ha ocurrido un error:: \(error.localizedDescription)")
@@ -64,6 +106,7 @@ class SearchViewController: UIViewController  {
         }.resume()
     }
 }
+
 
 extension SearchViewController : UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
@@ -80,8 +123,6 @@ extension SearchViewController : UISearchBarDelegate {
         self.carTableView.reloadData()
     }
 }
-
-
 
 extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
    
@@ -100,6 +141,15 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
         celda.precioLabel.text =  "S/" + autoFiltrado[indexPath.row].price
         celda.puertasLabel.text  =  autoFiltrado[indexPath.row].puertas
         celda.pasajerosLabel.text = autoFiltrado[indexPath.row].pasajeros
+        
+        let status = CLLocationManager.authorizationStatus()
+        switch status {
+        case .authorizedAlways , .authorizedWhenInUse :
+            celda.distanciaLabel.text = "    A " + String(format : "%0.2f", autoFiltrado[indexPath.row].distance ) + " km"
+            
+        case .denied , .notDetermined , .restricted : break
+        }
+        
         if autoFiltrado[indexPath.row].disponible == true {
             celda.disponibleLabel.text = "✅ Disponible"
         }else{
@@ -133,19 +183,5 @@ extension SearchViewController: UITableViewDataSource , UITableViewDelegate  {
             vcLlegada.carroData = autoSeleccionado
         }
     }
-    
-        
-    
-    @IBAction func DistanceSwitch(_ sender: UISwitch) {
-        if sender.isOn {
-            //LocationManager.shared.getLocation()
-            print("GPS Activado")
-            
-            
-        }else{
+}
 
-            print("GPS Desactivado")
-            
-    }
-}
-}

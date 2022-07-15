@@ -33,7 +33,7 @@ class TarjetViewController: UIViewController {
     private let database = Firestore.firestore()
     @IBAction func Compra(_ sender: Any) {
         
-        self.database.collection("Solitudes de Renta").document("\(self.nombres.text ?? "" )  \(self.apellidos.text ?? "")").setData([
+        self.database.collection("Solicitudes de Renta").document("\(self.nombres.text ?? "" )  \(self.apellidos.text ?? "")").setData([
             "Nombre":nombres.text ?? "",
             "Apellido":apellidos.text ?? "",
             "DNI":dni.text ?? "",
@@ -64,14 +64,12 @@ class TarjetViewController: UIViewController {
         }
         
         else{
-            let alerta = UIAlertController(title: "Solicitud Exitosa", message: "Se le informara por email o a traves de una llamada al su solicitud", preferredStyle: .alert)
+            let alerta = UIAlertController(title: "Solicitud Exitosa", message: "Se le informara por email o a traves de una llamada al aceptar su solicitud", preferredStyle: .alert)
             let btnAceptar = UIAlertAction(title: "Aceptar" ,
                                       style: .default,
                                       handler: {(UIAlertAction)in
-                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Svc") as! SearchViewController
-                vc.definesPresentationContext = true
-                vc.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-                self.navigationController?.show(vc , sender: true)
+                let vc = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "svc") as! SearchViewController
+                self.navigationController?.pushViewController(vc, animated: true)
             }
             )
             alerta.addAction(btnAceptar)

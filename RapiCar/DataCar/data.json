@@ -10,7 +10,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.776705,
-        "length": -79.830139,
+        "longitude": -79.830139,
         "disponible": true
     },
     {
@@ -24,7 +24,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.779259,
-        "length":  -79.840848,
+        "longitude":  -79.840848,
         "disponible": false
     },
     {
@@ -38,7 +38,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude":-6.759296,
-        "length":-79.854147,
+        "longitude":-79.854147,
         "disponible": true
     },
     {
@@ -52,7 +52,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -5.181631,
-        "length": -80.674875,
+        "longitude": -80.674875,
         "disponible": true
     },
     {
@@ -66,7 +66,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude":-13.166553,
-        "length": -74.219171,
+        "longitude": -74.219171,
         "disponible": false
     },
     {
@@ -80,7 +80,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.164902,
-        "length": -74.221757,
+        "longitude": -74.221757,
         "disponible": true
     },
     {
@@ -94,7 +94,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.527243,
-        "length": -71.963211,
+        "longitude": -71.963211,
         "disponible": true
     },
     {
@@ -108,7 +108,7 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -6.763576,
-        "length": -79.865969,
+        "longitude": -79.865969,
         "disponible": true
     },
     {
@@ -122,7 +122,7 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -13.525167,
-        "length": -71.964252,
+        "longitude": -71.964252,
         "disponible": true
     },
     {
@@ -136,7 +136,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -13.523289,
-        "length": -71.962825,
+        "longitude": -71.962825,
         "disponible": true
     },
     {
@@ -150,7 +150,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -16.399150,
-        "length": -71.537639,
+        "longitude": -71.537639,
         "disponible": false
     },
     {
@@ -164,7 +164,7 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -16.416496,
-        "length": -71.509560,
+        "longitude": -71.509560,
         "disponible": true
     },
     {
@@ -178,7 +178,7 @@
         "puertas": "4",
         "pasajeros":"4",
         "latitude": -16.409480,
-        "length": -71.496834,
+        "longitude": -71.496834,
         "disponible": true
     },
     {
@@ -192,7 +192,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.076303,
-        "length": -77.015364,
+        "longitude": -77.015364,
         "disponible": true
     },
     {
@@ -206,7 +206,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.786656,
-        "length": -79.840001,
+        "longitude": -79.840001,
         "disponible": true
     },
     {
@@ -220,7 +220,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -8.126992,
-        "length": -79.038566,
+        "longitude": -79.038566,
         "disponible": true
     },
     {
@@ -234,7 +234,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -7.157739,
-        "length": -78.519138,
+        "longitude": -78.519138,
         "disponible": true
     },
     {
@@ -248,7 +248,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.036989,
-        "length": -77.028038,
+        "longitude": -77.028038,
         "disponible": false
     },
     {
@@ -262,7 +262,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -12.054965,
-        "length": -77.124557,
+        "longitude": -77.124557,
         "disponible": true
     },
     {
@@ -276,7 +276,7 @@
         "puertas":"2",
         "pasajeros":"4",
         "latitude": -12.102557,
-        "length": -77.036399,
+        "longitude": -77.036399,
         "disponible": true
     },
     {
@@ -290,7 +290,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -11.975153,
-        "length": -77.076129,
+        "longitude": -77.076129,
         "disponible": true
     },
     {
@@ -304,7 +304,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -11.969482,
-        "length": -77.001131,
+        "longitude": -77.001131,
         "disponible": false
     },
     {
@@ -317,8 +317,8 @@
         "year": "2017",
         "puertas":"4",
         "pasajeros":"4",
-        "latitude": -6.758689,
-        "length":   -79.857934,
+        "latitude": -6.750161,
+        "longitude": -79.832540,
         "disponible": true
     },
     {
@@ -332,7 +332,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -7.179990,
-        "length": -79.438577,
+        "longitude": -79.438577,
         "disponible": true
     },
     {
@@ -346,7 +346,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.834276,
-        "length": -79.933241,
+        "longitude": -79.933241,
         "disponible": true
     },
     {
@@ -360,7 +360,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.635086,
-        "length": -79.786534,
+        "longitude": -79.786534,
         "disponible": true
     },
     {
@@ -374,7 +374,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude":-6.637164,
-        "length": -79.790278,
+        "longitude": -79.790278,
         "disponible": true
     },
     {
@@ -388,7 +388,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.769915,
-        "length": -79.775890,
+        "longitude": -79.775890,
         "disponible": true
     },
     {
@@ -402,7 +402,7 @@
         "puertas":"2",
         "pasajeros":"2",
         "latitude": -6.784207,
-        "length": -79.842216,
+        "longitude": -79.842216,
         "disponible": true
     },
     {
@@ -416,7 +416,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.781671,
-        "length": -79.846379,
+        "longitude": -79.846379,
         "disponible": true
     },
     {
@@ -430,7 +430,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -8.105070,
-        "length": -79.045136,
+        "longitude": -79.045136,
         "disponible": true
     },
     {
@@ -444,7 +444,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.767401,
-        "length": -79.868498,
+        "longitude": -79.868498,
         "disponible": true
     },
     {
@@ -458,7 +458,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.763357,
-        "length": -79.864450,
+        "longitude": -79.864450,
         "disponible": true
     },
     {
@@ -472,7 +472,7 @@
         "puertas":"4",
         "pasajeros":"4",
         "latitude": -6.760438,
-        "length": -79.834242,
+        "longitude": -79.834242,
         "disponible": false
     }
 ]

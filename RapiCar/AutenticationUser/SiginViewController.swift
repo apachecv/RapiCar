@@ -50,7 +50,7 @@ class SiginViewController: UIViewController {
             if error != nil{
                 if error?.localizedDescription == "The email address is badly formatted."{
                     print("Alerta1")
-                    let alerta = UIAlertController(title: "Creacion De Usuario", message: "Error al registrar: Usuario \(self.textUserEmail.text!) no es de tipo user@gmail.com", preferredStyle: .alert)
+                    let alerta = UIAlertController(title: "Error", message: " Usuario \(self.textUserEmail.text!) no es de tipo user@gmail.com", preferredStyle: .alert)
                     let btnOK = UIAlertAction(title: "Aceptar", style: .default)
                     alerta.addAction(btnOK)
                     self.present(alerta,animated: true,completion: nil)
@@ -90,8 +90,8 @@ class SiginViewController: UIViewController {
                     let btnAceptar = UIAlertAction(title: "Aceptar" ,
                                               style: .default,
                                               handler: {(UIAlertAction)in
-                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
-                        self.navigationController?.show(vc , sender: true)
+                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "lvc") as! LoginViewController
+                        self.navigationController?.pushViewController(vc, animated: true)
                     }
                     )
                     alerta.addAction(btnAceptar)
