@@ -8,6 +8,17 @@
 		<dict>
 			<key>orderHint</key>
 			<integer>23</integer>
+<<<<<<< HEAD
+=======
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>84A9115C286927B50095749C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+>>>>>>> feature/AppFuncional
 		</dict>
 	</dict>
 </dict>

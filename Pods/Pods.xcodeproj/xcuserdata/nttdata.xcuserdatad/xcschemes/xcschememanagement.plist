@@ -11,13 +11,6 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>FirebaseABTesting.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>FirebaseAnalytics.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,6 +45,7 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>6</integer>
+<<<<<<< HEAD
 		</dict>
 		<key>FirebaseCrashlytics.xcscheme</key>
 		<dict>
@@ -59,6 +53,8 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>8</integer>
+=======
+>>>>>>> feature/AppFuncional
 		</dict>
 		<key>FirebaseDatabase.xcscheme</key>
 		<dict>
@@ -87,6 +83,7 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>10</integer>
+<<<<<<< HEAD
 		</dict>
 		<key>FirebaseMessaging.xcscheme</key>
 		<dict>
@@ -101,6 +98,8 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>14</integer>
+=======
+>>>>>>> feature/AppFuncional
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
